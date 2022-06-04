@@ -13,6 +13,7 @@ class DB:
         logging.basicConfig()
         logging.getLogger("sqlalchemy.engine").setLevel(logging.root.level)
         Location.metadata.create_all(self.engine)
+        logging.info("Connected to database.")
 
     def add_location(self, data) -> Location:
         with Session(self.engine) as session:

@@ -11,6 +11,17 @@
             "program": "app/app.py",
             "console": "integratedTerminal",
             "justMyCode": true
+        },
+        {
+            "name": "Launch owntracks-to-db (Debug)",
+            "type": "python",
+            "request": "launch",
+            "program": "app/app.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "env": {
+                "DEBUG": "1"
+            }
         }
     ]
 }

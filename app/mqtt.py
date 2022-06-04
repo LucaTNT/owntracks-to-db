@@ -41,7 +41,7 @@ class MQTT:
         self.client.loop_forever()
 
     def on_connect(self, client, userdata, flags, rc):
-        logging.debug(f"Connected with result code {str(rc)}")
+        logging.info(f"Connected to MQTT with result code {str(rc)}")
 
         self.client.subscribe(self.config.get("mqtt_topic"))
 

@@ -4,7 +4,7 @@ import logging
 from db import DB
 from mqtt import MQTT
 
-loglevel = logging.DEBUG if bool(environ.get('DEBUG', 0)) else logging.WARN
+loglevel = logging.DEBUG if bool(environ.get('DEBUG', 0)) else logging.INFO
 logging.basicConfig(level=loglevel)
 
 DB_CONNECTION = environ.get("DB_CONNECTION", "sqlite:///locations.db")
